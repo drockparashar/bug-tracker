@@ -1,0 +1,19 @@
+.parent{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px rgb(240, 240, 240);
+}
+
+.left,.right
+{
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}

@@ -11,14 +11,15 @@ const bugSchema = new mongoose.Schema({
   image: {
     type: String,
     required: true,
-  }, // Assuming the image is a URL or file path
-  // assigner: {
-  //   type: String,
-  //   default: false,
-  // },
-  // assignedTo: {
-  //   type: String,
-  // },
+  }, 
+  assignedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    required:true,
+  },
+  assignedTo: {
+    type: mongoose.Schema.Types.ObjectId,
+    required:true,
+  },
   priority: {
     type: String,
     enum: ['Low', 'Normal', 'High', 'Critical'],
@@ -31,6 +32,6 @@ const bugSchema = new mongoose.Schema({
   },
 }, { timestamps: true });
 
-const BugModel = mongoose.model('buge', bugSchema);
+const BugModel = mongoose.model('bug', bugSchema);
 
 export default BugModel

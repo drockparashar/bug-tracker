@@ -12,7 +12,7 @@ const Navigation = () => {
           <li>Contact</li>
         </ul>
       </nav>
-      <button onClick={()=>{navigation("/createBug")}}>Create Bug</button>
+
     </>
   );
 };
